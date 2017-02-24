@@ -23,7 +23,7 @@ public class A3Q3 {
         // city kw
         City kw = new City();
         //robot karel
-        RobotSE karel = new RobotSE(kw, 1, 1, Direction.EAST);
+        RobotSE timmy = new RobotSE(kw, 1, 1, Direction.EAST);
         //creating enclosed rectangular room
         new Wall(kw, 1, 1, Direction.NORTH);
         new Wall(kw, 1, 2, Direction.NORTH);
@@ -47,38 +47,23 @@ public class A3Q3 {
         new Thing(kw, 3, 4);
         new Thing(kw, 3, 1);
         
-        //making karel pick up litter
+        //making timmy pick up litter
         //loop
-        while (true) {
-            karel.move();
-            while (karel.canPickThing()) {
-                karel.pickThing();
-            }
-            //if holding 1 thing turn right
-            if (karel.countThingsInBackpack() == 1) {
-                karel.turnRight();
-            }
-            else if (karel.countThingsInBackpack() == 2) {
-                karel.turnLeft();
-            }
-            else if (karel.countThingsInBackpack() == 4) {
-                karel.turnRight();
-            }
-           else if (karel.countThingsInBackpack() == 5) {
-                karel.turnRight();
-                karel.move();
-                karel.move();
-                karel.move();
-                karel.turnRight();
-           karel.pickThing();}
-           else if (karel.countThingsInBackpack() == 6) {
-               if(karel.frontIsClear() == true)
-                karel.move();
-               if(karel.frontIsClear() == false)
-                   break;
-               
-            }
-        }
-    }
-    }
+        
+            
+       while (true){ timmy.pickAllThings(); 
+       if (timmy.getAvenue() == 4){
+           timmy.turnRight();
+       }
+        if (timmy.getAvenue() == 1){
+           timmy.turnLeft();
+       }
+        if(timmy.frontIsClear() == true)
+            timmy.move();
 
+       }
+        
+        //making timmy move to 1,1 if avenue is less than 1
+      
+}
+           

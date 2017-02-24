@@ -37,40 +37,12 @@ public class A3Q2 {
             karel.move();
             karel.move();
             karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            karel.move();
-            karel.move();
-            karel.turnLeft();
-            karel.move();
-            break;
+            karel.move();}
+
+
+           
+           
+        }
             
         }
 
-
-
-    }
-}

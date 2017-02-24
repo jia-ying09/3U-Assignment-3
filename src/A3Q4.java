@@ -27,6 +27,7 @@ public class A3Q4 {
         new Wall(kw, 3, 1, Direction.SOUTH);
         new Wall(kw, 3, 2, Direction.SOUTH);
         new Wall(kw, 3, 3, Direction.SOUTH);
+        new Wall(kw, 3, 4, Direction.SOUTH);
         new Wall(kw, 3, 5, Direction.SOUTH);
         new Wall(kw, 0, 0, Direction.NORTH);
         new Wall(kw, 0, 1, Direction.NORTH);
