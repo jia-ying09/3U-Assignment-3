@@ -46,24 +46,88 @@ public class A3Q3 {
         new Thing(kw, 2, 4);
         new Thing(kw, 3, 4);
         new Thing(kw, 3, 1);
-        
-        //making timmy pick up litter
-        //loop
-        
-            
-       while (true){ timmy.pickAllThings(); 
-       if (timmy.getAvenue() == 4){
-           timmy.turnRight();
-       }
-        if (timmy.getAvenue() == 1){
-           timmy.turnLeft();
-       }
-        if(timmy.frontIsClear() == true)
-            timmy.move();
 
-       }
-        
-        //making timmy move to 1,1 if avenue is less than 1
-      
+        //making timmy pick up litter
+        while (true) {
+            if (timmy.getStreet() == 1) {
+                timmy.move();
+            }
+            if (timmy.canPickThing()) {
+                timmy.pickAllThings();
+            }
+            if (timmy.getAvenue() == 4) {
+                timmy.turnRight();
+            }
+            if (timmy.getAvenue() == 1) {
+                timmy.turnLeft();
+            }
+            if (timmy.frontIsClear() == true) {
+                timmy.move();
+            }
+            if (timmy.canPickThing()) {
+                timmy.pickAllThings();
+            }
+
+            //making timmy move to 1,1 if avenue is less than 1
+            if (timmy.getAvenue() == 4 && timmy.getStreet() == 3) {
+                while (timmy.getAvenue() < 1) {
+                    if (timmy.getDirection() == Direction.NORTH) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.SOUTH) {
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.WEST) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    timmy.move();
+                }
+                //making timmy move to 1,1 if avenue is greater than 1
+                while (timmy.getAvenue() > 1) {
+                    if (timmy.getDirection() == Direction.NORTH) {
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.EAST) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.SOUTH) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    timmy.move();
+                }
+                //making timmy move to 1,1 if street is less than 1
+                while (timmy.getStreet() < 1) {
+                    if (timmy.getDirection() == Direction.EAST) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.WEST) {
+                        timmy.turnLeft();
+                    }
+                    timmy.move();
+                }
+                //making timmy move to 1,1 if street is greater than 1
+                while (timmy.getStreet() > 1) {
+                    if (timmy.getDirection() == Direction.EAST) {
+                        timmy.turnLeft();
+                    }
+                    if (timmy.getDirection() == Direction.WEST) {
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                        timmy.turnLeft();
+                    }
+                    timmy.move();
+                }
+                while (timmy.getStreet() == 1 && timmy.getAvenue() == 1);
+                break;
+            }
+        }
+    }
 }
-           

@@ -33,11 +33,14 @@ public class A3Q2 {
         new Wall(kw, 2, 2, Direction.SOUTH);
         new Wall(kw, 2, 1, Direction.SOUTH);
         //making karel move around the box
+        int counter = 0;
+        while (counter < 2){
         while (true) {
             karel.move();
             karel.move();
             karel.turnLeft();
-            karel.move();}
+            karel.move();
+        counter = counter + 1;}
 
 
            
