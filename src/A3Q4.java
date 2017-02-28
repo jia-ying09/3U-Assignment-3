@@ -27,7 +27,6 @@ public class A3Q4 {
         new Wall(kw, 3, 1, Direction.SOUTH);
         new Wall(kw, 3, 2, Direction.SOUTH);
         new Wall(kw, 3, 3, Direction.SOUTH);
-        new Wall(kw, 3, 4, Direction.SOUTH);
         new Wall(kw, 3, 5, Direction.SOUTH);
         new Wall(kw, 0, 0, Direction.NORTH);
         new Wall(kw, 0, 1, Direction.NORTH);
@@ -46,22 +45,28 @@ public class A3Q4 {
         //create robot karel
         RobotSE karel = new RobotSE(kw, 1, 1, Direction.WEST);
         //making karel find the exit
+        karel.turnRight();
+        karel.move();
+        karel.turnLeft();
+        karel.move();
         while (true) {
-            if (karel.frontIsClear() == true) {
-                karel.turnRight();
+            if (karel.frontIsClear() == true) {;
                 karel.move();
+                karel.turnLeft();
             } else if (karel.frontIsClear() == false) {
                 karel.turnRight();
             }
-            if (karel.isFacingSouth() == true) {
-                if (karel.frontIsClear() == true)
-                    karel.move(); 
-        }       if(karel.getStreet() == 4)
-            break;
-        else if(karel.getAvenue() == 6)
-            break;
+            if (karel.getStreet() == 4) {
+                break;
+            } else if (karel.getAvenue() == 6) {
+                break;
+            } else if (karel.getAvenue() == -1) {
+                break;
+            } else if (karel.getStreet() == -1) {
+                break;
+            }
 
 
+        }
     }
-}
 }
