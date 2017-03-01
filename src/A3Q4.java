@@ -61,7 +61,7 @@ public class A3Q4 {
             }
             //making timmy stop when it is outside of the box
             if (karel.getStreet() == 4 || karel.getAvenue() == 6 || karel.getAvenue() == -1 || karel.getStreet() == -1) {
-                break; 
+                break;
             }
         }
     }
