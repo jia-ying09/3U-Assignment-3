@@ -22,8 +22,10 @@ public class A3Q3 {
     public static void main(String[] args) {
         // city kw
         City kw = new City();
+
         //robot karel
         RobotSE timmy = new RobotSE(kw, 1, 1, Direction.EAST);
+
         //creating enclosed rectangular room
         new Wall(kw, 1, 1, Direction.NORTH);
         new Wall(kw, 1, 2, Direction.NORTH);
@@ -39,6 +41,7 @@ public class A3Q3 {
         new Wall(kw, 1, 4, Direction.EAST);
         new Wall(kw, 2, 4, Direction.EAST);
         new Wall(kw, 3, 4, Direction.EAST);
+
         //inserting litter
         new Thing(kw, 1, 2);
         new Thing(kw, 2, 2);
@@ -68,23 +71,8 @@ public class A3Q3 {
                 timmy.pickAllThings();
             }
 
-            //making timmy move to 1,1 if avenue is less than 1
+            //returning timmy back to original spot
             if (timmy.getAvenue() == 4 && timmy.getStreet() == 3) {
-                while (timmy.getAvenue() < 1) {
-                    if (timmy.getDirection() == Direction.NORTH) {
-                        timmy.turnLeft();
-                        timmy.turnLeft();
-                        timmy.turnLeft();
-                    }
-                    if (timmy.getDirection() == Direction.SOUTH) {
-                        timmy.turnLeft();
-                    }
-                    if (timmy.getDirection() == Direction.WEST) {
-                        timmy.turnLeft();
-                        timmy.turnLeft();
-                    }
-                    timmy.move();
-                }
                 //making timmy move to 1,1 if avenue is greater than 1
                 while (timmy.getAvenue() > 1) {
                     if (timmy.getDirection() == Direction.NORTH) {
@@ -101,18 +89,6 @@ public class A3Q3 {
                     }
                     timmy.move();
                 }
-                //making timmy move to 1,1 if street is less than 1
-                while (timmy.getStreet() < 1) {
-                    if (timmy.getDirection() == Direction.EAST) {
-                        timmy.turnLeft();
-                        timmy.turnLeft();
-                        timmy.turnLeft();
-                    }
-                    if (timmy.getDirection() == Direction.WEST) {
-                        timmy.turnLeft();
-                    }
-                    timmy.move();
-                }
                 //making timmy move to 1,1 if street is greater than 1
                 while (timmy.getStreet() > 1) {
                     if (timmy.getDirection() == Direction.EAST) {
@@ -125,6 +101,7 @@ public class A3Q3 {
                     }
                     timmy.move();
                 }
+                //stopping at (1, 1)
                 while (timmy.getStreet() == 1 && timmy.getAvenue() == 1);
                 break;
             }

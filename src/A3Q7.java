@@ -20,10 +20,10 @@ public class A3Q7 {
     public static void main(String[] args) {
         // create city
         City kw = new City();
-        
+
         //create robot timmy
         Robot timmy = new Robot(kw, 3, 3, Direction.SOUTH);
-        
+
         //create box (top left)
         new Wall(kw, 1, 1, Direction.NORTH);
         new Wall(kw, 1, 2, Direction.NORTH);

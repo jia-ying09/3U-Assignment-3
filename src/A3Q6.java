@@ -65,7 +65,7 @@ public class A3Q6 {
                 timmy.turnRight();
                 timmy.move();
             }
-            
+
             if (timmy.frontIsClear() == true) {
                 timmy.putThing();
             }

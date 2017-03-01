@@ -22,6 +22,7 @@ public class A3Q4 {
     public static void main(String[] args) {
         // create city kw
         City kw = new City();
+
         //create rectangular box
         new Wall(kw, 3, 0, Direction.SOUTH);
         new Wall(kw, 3, 1, Direction.SOUTH);
@@ -42,8 +43,10 @@ public class A3Q4 {
         new Wall(kw, 1, 0, Direction.WEST);
         new Wall(kw, 2, 0, Direction.WEST);
         new Wall(kw, 3, 0, Direction.WEST);
+
         //create robot karel
         RobotSE karel = new RobotSE(kw, 1, 1, Direction.WEST);
+
         //making karel find the exit
         karel.turnRight();
         karel.move();
