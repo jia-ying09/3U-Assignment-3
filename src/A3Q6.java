@@ -31,11 +31,15 @@ public class A3Q6 {
         new Thing(kw, 1, 1);
         new Thing(kw, 1, 1);
         new Thing(kw, 1, 1);
+        new Thing(kw, 1, 1);
+        new Thing(kw, 1, 1);
         new Thing(kw, 2, 1);
         new Thing(kw, 2, 1);
         new Thing(kw, 2, 1);
         new Thing(kw, 2, 1);
         new Thing(kw, 2, 1);
+        new Thing(kw, 3, 1);
+        new Thing(kw, 3, 1);
         new Thing(kw, 3, 1);
         new Thing(kw, 3, 1);
 
@@ -61,10 +65,12 @@ public class A3Q6 {
                 timmy.turnRight();
                 timmy.move();
             }
+            
             if (timmy.frontIsClear() == true) {
                 timmy.putThing();
             }
             if (timmy.countThingsInBackpack() == 0) {
+                timmy.move();
                 break;
             }
 
