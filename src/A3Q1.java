@@ -21,6 +21,7 @@ public class A3Q1 {
     public static void main(String[] args) {
         // create city
         City kw = new City();
+
         //robot karel
         Robot karel = new Robot(kw, 0, 0, Direction.EAST);
 
@@ -28,6 +29,7 @@ public class A3Q1 {
         new Thing(kw, 0, 2);
         new Thing(kw, 0, 3);
         new Wall(kw, 0, 4, Direction.WEST);
+
         //robot timmy
         Robot timmy = new Robot(kw, 2, 0, Direction.EAST);
         //inserting wall and thing

@@ -20,6 +20,7 @@ public class A3Q2 {
     public static void main(String[] args) {
         // new city
         City kw = new City();
+
         //create karel
         Robot timmy = new Robot(kw, 0, 2, Direction.WEST);
 
@@ -32,6 +33,7 @@ public class A3Q2 {
         new Wall(kw, 2, 1, Direction.WEST);
         new Wall(kw, 2, 2, Direction.SOUTH);
         new Wall(kw, 2, 1, Direction.SOUTH);
+
         //making karel move around the box
         int counter = 0;
         while (counter < 2) {
