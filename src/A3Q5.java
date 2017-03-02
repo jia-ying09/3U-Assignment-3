@@ -40,22 +40,25 @@ public class A3Q5 {
         new Thing(kw, 1, 1);
         new Thing(kw, 1, 1);
 
-        //making timmy move a pile of things to a new spot
-        while (true) {
+        //creating counter
+        int counter = 0;
+        while (counter < 9) {
+            counter = counter + 1;
+
+            //making timmy move a pile of things to a new spot
             if (timmy.canPickThing() == true) {
                 timmy.pickThing();
                 timmy.move();
+                timmy.turnAround();
                 timmy.putThing();
-                timmy.turnLeft();
-                timmy.turnLeft();
                 timmy.move();
-                timmy.turnLeft();
-                timmy.turnLeft();
-            } else if (timmy.canPickThing() == false) {
-                timmy.move();
-                break;
+                timmy.turnAround();
             }
-
         }
+        if (timmy.canPickThing() == true) {
+            timmy.pickThing();
+        }
+        timmy.move();
+        timmy.putThing();
     }
 }

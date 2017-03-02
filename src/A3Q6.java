@@ -21,13 +21,13 @@ public class A3Q6 {
     public static void main(String[] args) {
         // new city kw
         City kw = new City();
-        
+
         //robot timmy
         RobotSE timmy = new RobotSE(kw, 0, 1, Direction.SOUTH);
-        
+
         //show number of things in a pile
         kw.showThingCounts(true);
-        
+
         //placing things in a row
         new Thing(kw, 1, 1);
         new Thing(kw, 1, 1);

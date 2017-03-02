@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.RobotSE;
 import becker.robots.Wall;
 
 /*
@@ -22,7 +23,7 @@ public class A3Q7 {
         City kw = new City();
 
         //create robot timmy
-        Robot timmy = new Robot(kw, 3, 3, Direction.SOUTH);
+        RobotSE timmy = new RobotSE(kw, 3, 3, Direction.SOUTH);
 
         //create box (top left)
         new Wall(kw, 1, 1, Direction.NORTH);
@@ -33,6 +34,7 @@ public class A3Q7 {
         new Wall(kw, 2, 2, Direction.SOUTH);
         new Wall(kw, 2, 2, Direction.EAST);
         new Wall(kw, 1, 2, Direction.EAST);
+
         //create box (top right)
         new Wall(kw, 1, 4, Direction.NORTH);
         new Wall(kw, 1, 5, Direction.NORTH);
@@ -42,6 +44,7 @@ public class A3Q7 {
         new Wall(kw, 2, 4, Direction.SOUTH);
         new Wall(kw, 2, 5, Direction.EAST);
         new Wall(kw, 1, 5, Direction.EAST);
+
         //create box (bottom left)
         new Wall(kw, 4, 1, Direction.NORTH);
         new Wall(kw, 4, 2, Direction.NORTH);
@@ -51,6 +54,7 @@ public class A3Q7 {
         new Wall(kw, 5, 2, Direction.SOUTH);
         new Wall(kw, 5, 2, Direction.EAST);
         new Wall(kw, 4, 2, Direction.EAST);
+
         //create box (bottom right)
         new Wall(kw, 4, 4, Direction.NORTH);
         new Wall(kw, 4, 5, Direction.NORTH);
@@ -61,8 +65,12 @@ public class A3Q7 {
         new Wall(kw, 5, 5, Direction.EAST);
         new Wall(kw, 4, 5, Direction.EAST);
 
-        //making timmy move around the first block
-        while (true) {
+        //setting a counter
+        int counter = 0;
+        while (counter < 8) {
+            counter = counter + 1;
+
+            //making timmy move around the block
             if (timmy.frontIsClear() == true) {
                 timmy.move();
                 timmy.move();
@@ -74,10 +82,9 @@ public class A3Q7 {
                 timmy.turnLeft();
             }
             if (timmy.getStreet() == 3 && timmy.getAvenue() == 3) {
-                timmy.turnLeft();
-                timmy.turnLeft();
-                timmy.turnLeft();
+                timmy.turnRight();
             }
+
         }
     }
 }

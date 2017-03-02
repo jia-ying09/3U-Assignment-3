@@ -89,6 +89,7 @@ public class A3Q3 {
                     }
                     timmy.move();
                 }
+
                 //making timmy move to 1,1 if street is greater than 1
                 while (timmy.getStreet() > 1) {
                     if (timmy.getDirection() == Direction.EAST) {
@@ -101,6 +102,7 @@ public class A3Q3 {
                     }
                     timmy.move();
                 }
+
                 //stopping at (1, 1)
                 while (timmy.getStreet() == 1 && timmy.getAvenue() == 1);
                 break;

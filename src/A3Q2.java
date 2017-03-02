@@ -36,19 +36,13 @@ public class A3Q2 {
 
         //making karel move around the box
         int counter = 0;
-        while (counter < 2) {
-            while (true) {
-                timmy.move();
-                timmy.move();
-                timmy.turnLeft();
-                timmy.move();
-                counter = counter + 1;
-            }
+        while (counter < 8) {
+            counter = counter + 1;
 
-
-
-
+            timmy.move();
+            timmy.move();
+            timmy.turnLeft();
+            timmy.move();
         }
-
     }
 }
