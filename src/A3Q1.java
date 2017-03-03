@@ -32,21 +32,25 @@ public class A3Q1 {
 
         //robot timmy
         Robot timmy = new Robot(kw, 2, 0, Direction.EAST);
-        
+
         //inserting wall and thing
         new Wall(kw, 2, 5, Direction.EAST);
         new Thing(kw, 2, 6);
 
-        //making karel stop at first thing
+        //making karel move
         while (true) {
             karel.move();
+
+            //making karel stop at first thing
             if (karel.canPickThing()) {
                 break;
             }
-            
-            //making timmy stop at first wall
+
+            //making timmy move
             while (true) {
                 timmy.move();
+
+                //making timmy stop at first wall
                 if (timmy.frontIsClear() == false) {
                     break;
                 }
