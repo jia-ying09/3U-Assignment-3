@@ -125,13 +125,9 @@ public class A3Q6 {
                 }
             }
             //stopping at (4, 1)
-        if (timmy.getStreet() == 4 && timmy.getAvenue() == 1) {
-            break;
-        }
+            if (timmy.getStreet() == 4 && timmy.getAvenue() == 1) {
+                break;
+            }
         }
     }
 }
-        
-        
-
-    
